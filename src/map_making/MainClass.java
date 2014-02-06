@@ -12,7 +12,7 @@ public class MainClass {
 		
 		int maxFieldSize = 5; // Number of fields (x & y)
 		int tileSize = 128; //Pixel
-		private static final Random random = new Random();
+		final Random random = new Random();
 		ArrayList<ArrayList<Field>> map = new ArrayList<ArrayList<Field>>();
 		
 
