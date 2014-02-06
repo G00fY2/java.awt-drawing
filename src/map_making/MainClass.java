@@ -2,7 +2,6 @@ package map_making;
 
 import java.util.ArrayList;
 import java.util.Random;
-
 import map_drawing.DisplayGrid;
 
 
@@ -11,9 +10,9 @@ public class MainClass {
 	
 	public static void main(String[] args) {
 		
-		int maxFieldSize = 5;
+		int maxFieldSize = 5; // Number of fields (x & y)
 		int tileSize = 128; //Pixel
-		Random random = new Random();
+		private static final Random random = new Random();
 		ArrayList<ArrayList<Field>> map = new ArrayList<ArrayList<Field>>();
 		
 
