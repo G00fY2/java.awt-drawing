@@ -12,13 +12,13 @@ public class MainClass {
 		ArrayList<ArrayList<Field>> map = new ArrayList<ArrayList<Field>>();
 		
 		for(int i = 0; i < maxFieldSize; i++){
-		   ArrayList<Field> fieldList = new ArrayList<Field>();
-	
-		   for(int j = 0; j < maxFieldSize; j++) {
-			   fieldList.add(random.nextBoolean() ? new Land() : new Ocean());
-		   }  
+			ArrayList<Field> fieldList = new ArrayList<Field>();
+		
+			for(int j = 0; j < maxFieldSize; j++) {
+				fieldList.add(random.nextBoolean() ? new Land() : new Ocean());
+			}  
 		   
-		   map.add(fieldList);
+			map.add(fieldList);
 		}
 		
 		System.out.println("DEBUG");
@@ -26,11 +26,11 @@ public class MainClass {
 		for(ArrayList<Field> m : map){
 			for(Field f : m) {
 				if ((m.indexOf(f)) == 0){
-					  System.out.println("--" + (map.indexOf(m) + 1) + "--");
+					System.out.println("--" + (map.indexOf(m) + 1) + "--");
 				}
-				
+			
 				f.test();
-				
+			
 				if ((m.indexOf(f) + 1) == m.size()) {
 					System.out.println("");
 				}

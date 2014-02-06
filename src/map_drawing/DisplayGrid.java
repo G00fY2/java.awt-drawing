@@ -7,6 +7,14 @@ import javax.swing.JFrame;
 import map_making.Field;
 
 public class DisplayGrid {
+	public static ArrayList<ArrayList<Field>> generateGrid() {
+		ArrayList<ArrayList<Field>> grid = new ArrayList<ArrayList<Field>>();
+		
+		
+		
+		return grid;
+	}
+	
 	public static void displayGrid(int maxSize, int tileSize, ArrayList<ArrayList<Field>> map) {
 		JFrame frame = new JFrame("Test");
 		Tile tile; 
