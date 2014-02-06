@@ -3,9 +3,7 @@ package map_drawing;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.util.ArrayList;
-
 import javax.swing.JFrame;
-
 import map_making.Field;
 
 
@@ -23,9 +21,8 @@ public class DisplayGrid{
 	for(ArrayList<Field> m : map){
 		for(Field field : m)
 		{
-	    	Tile tile = new Tile(tileSize);
-	    	tile.setBackground(field.getColor());
-	        frame.add(tile);
+	    	Tile tile = new Tile(tileSize, field);
+	    	frame.add(tile);
 		}  
 	}   
 
