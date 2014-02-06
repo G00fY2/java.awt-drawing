@@ -3,14 +3,33 @@ package map_drawing;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.util.ArrayList;
+import java.util.Random;
+
 import javax.swing.JFrame;
+
 import map_making.Field;
+import map_making.Land;
+import map_making.Ocean;
 
 public class DisplayGrid {
-	public static ArrayList<ArrayList<Field>> generateGrid() {
+	public static ArrayList<ArrayList<Field>> generateGrid(int maxFieldSize) {
 		ArrayList<ArrayList<Field>> grid = new ArrayList<ArrayList<Field>>();
+		Random random = new Random();
 		
+		for(int i = 0; i < maxFieldSize; i++){	
+			ArrayList<Field> fieldList = new ArrayList<Field>();  
 		
+			for(int j = 0; j < maxFieldSize; j++){
+				if(i == 0 || j == 0 || i == maxFieldSize - 1 || j == maxFieldSize - 1) {
+					fieldList.add(new Ocean());
+				}
+				else {
+					fieldList.add(random.nextBoolean() ? new Ocean() : new Land());
+				}
+			}
+			
+			grid.add(fieldList);
+		}
 		
 		return grid;
 	}
