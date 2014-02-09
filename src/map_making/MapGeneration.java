@@ -6,27 +6,22 @@ import java.util.Random;
 
 public class MapGeneration {
  	
- 	public static ArrayList<ArrayList<Field>> generateGrid(int maxFieldSize) {
+ 	public static ArrayList<ArrayList<Field>> generateMap(int maxFields, int tileSize) {
  		
-  		ArrayList<ArrayList<Field>> grid = new ArrayList<ArrayList<Field>>();
+  		ArrayList<ArrayList<Field>> map = new ArrayList<ArrayList<Field>>();
  		Random random = new Random();
   		
- 		for(int i = 0; i < maxFieldSize; i++){	
+ 		for(int i = 0; i < maxFields; i++){	
  			ArrayList<Field> fieldList = new ArrayList<Field>();  
   		
- 			for(int j = 0; j < maxFieldSize; j++) {
- 				if(i == 0 || j == 0 || i == maxFieldSize - 1 || j == maxFieldSize - 1) {
- 					fieldList.add(new Ocean());
- 				}
- 				else {
- 					fieldList.add(random.nextBoolean() ? new Ocean() : new Land());
- 				}
+ 			for(int j = 0; j < maxFields; j++) {
+ 					fieldList.add(random.nextBoolean() ? new Ocean(tileSize) : new Land(tileSize));
  			}
  			
- 			grid.add(fieldList);
+ 			map.add(fieldList);
  		}
   		
-	return grid;
+	return map;
 	}
 }
 
