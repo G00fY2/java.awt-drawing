@@ -8,12 +8,14 @@ public class MainClass {
 	
 	public static void main(String[] args) {
 		
-		int maxFields = 12; // number of tiles (x & y)
-		int tileSize = 24; // pixel
-		int viewType = 1; // 1=2D view; 2=isometric view (not implemented yet)
+		int maxFields = 8; // number of tiles (x & y)
+		int tileSize = 65; // pixel
+		int viewType = 2; // 1=2D view; 2=isometric view (not implemented yet)
 		boolean grid = true; // show grid overlay
 		boolean debug = true; // console output
 		
+		while(tileSize%2!=0){tileSize--;} // get even number, cause Polygon objects only have int precision 
+
 		ArrayList<ArrayList<Field>> map = MapGeneration.generateMap(maxFields, tileSize);
 		DisplayGrid.displayGrid(viewType, maxFields, map, grid);
 		
