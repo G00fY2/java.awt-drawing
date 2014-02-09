@@ -1,1 +1,26 @@
 /bin
+<<<<<<< master
+=======
+src/.classpath
+src/.project
+src/map_drawing/.gitignore
+src/map_making/.gitignore
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/vcs.xml
+.idea/workspace.xml
+out/production/Island/map_drawing/DisplayGrid.class
+out/production/Island/map_drawing/IsoTile.class
+out/production/Island/map_drawing/Tile.class
+out/production/Island/map_drawing/TwoDTile.class
+out/production/Island/map_making/Field.class
+out/production/Island/map_making/Land.class
+out/production/Island/map_making/MainClass.class
+out/production/Island/map_making/MapGeneration.class
+out/production/Island/map_making/Ocean.class
+>>>>>>> 1ff7edf - Added View as interface; implemented by TwoDView and IsometricView. Simplifies displayGrid-method - cleanup

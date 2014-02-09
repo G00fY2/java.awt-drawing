@@ -11,7 +11,6 @@ import java.awt.RenderingHints;
 import map_making.Field;
 
 public class TwoDTile extends Tile {
-	
 	private static final long serialVersionUID = 1L;
 	int xCrd[] = new int[4];
 	int yCrd[] = new int[4];
