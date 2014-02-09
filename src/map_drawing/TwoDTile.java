@@ -10,7 +10,6 @@ import java.awt.Polygon;
 import map_making.Field;
 
 public class TwoDTile extends Tile {
-	
 	private static final long serialVersionUID = 1L;
 	
 	TwoDTile(int space, Field field, int x, int y, Boolean grid) {
