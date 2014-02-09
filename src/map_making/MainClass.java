@@ -8,10 +8,8 @@ import map_drawing.View;
 public class MainClass {
 	
 	public static void main(String[] args) {
-		
 		int maxFields = 12; // number of tiles (x & y)
 		int tileSize = 24; // pixel
-		int viewType = 1; // 1=2D view; 2=isometric view (not implemented yet)
 		boolean grid = true; // show grid overlay
 		boolean debug = true; // console output
 

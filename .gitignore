@@ -21,3 +21,8 @@ out/production/Island/map_making/Land.class
 out/production/Island/map_making/MainClass.class
 out/production/Island/map_making/MapGeneration.class
 out/production/Island/map_making/Ocean.class
+.idea/uiDesigner.xml
+Island.iml
+out/production/Island/map_drawing/IsometricView.class
+out/production/Island/map_drawing/TwoDView.class
+out/production/Island/map_drawing/View.class
