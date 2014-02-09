@@ -1,1 +1,5 @@
 /bin
+src/.classpath
+src/.project
+src/map_drawing/.gitignore
+src/map_making/.gitignore
