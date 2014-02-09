@@ -34,6 +34,46 @@ public class DisplayGrid {
 		return grid;
 	}
 	
+	public static ArrayList<ArrayList<Field>> generateIsland(int minSize, int maxSize) {
+		Field[][] island = new Field[maxSize][maxSize];
+		
+		// Fill map with ocean tiles
+		for (int i = 0; i < maxSize; i++) {
+			for (int k = 0; k < maxSize; k++) {
+				island[i][k] = new Ocean();
+			}
+		}
+		
+		// Generate minimum land mass.
+		//
+		// The minimum land mass isn't centered, if its even and the grid itself
+		// isn't and vice versa. So the minSize is decreased if it has to be resized.
+		boolean resizeMinSize = minSize % 2 == 0 && maxSize % 2 != 0 || minSize % 2 != 0 && maxSize % 2 == 0;
+		
+		if (resizeMinSize) {
+			minSize -= 1;
+		}
+		
+		// Calculate starting index for land mass
+		int landMassStartingIndex = (maxSize - minSize) / 2 - 1;
+		
+		// Create minimum land mass
+		for (int i = landMassStartingIndex; i < landMassStartingIndex + minSize; i++) {
+			for (int k = landMassStartingIndex; k < landMassStartingIndex + minSize; k++) {
+				island[i][k] = new Land();
+			}
+		}
+		
+		// Convert arrays to ArrayList
+		ArrayList<ArrayList> container = new ArrayList<ArrayList>();
+		
+		for (int i = 0; i < maxSize; i++) {
+			container.add(new ArrayList<Field>(island[i]));
+		}
+		
+		return new ArrayList<ArrayList<Field>>(island);
+	}
+	
 	public static void displayGrid(int maxSize, int tileSize, ArrayList<ArrayList<Field>> map) {
 		JFrame frame = new JFrame("Test");
     

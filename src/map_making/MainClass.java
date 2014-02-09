@@ -12,10 +12,10 @@ public class MainClass {
 		
 		System.out.println("DEBUG");
 	
-		for(ArrayList<Field> m : map){
-			for(Field f : m) {
+		for (ArrayList<Field> m : map){
+			for (Field f : m) {
 				if ((m.indexOf(f)) == 0) {
-					System.out.println("--"+ (map.indexOf(m)+1) +"--");
+					System.out.println("--" + (map.indexOf(m) + 1) + "--");
 				}
 				
 				f.test();
