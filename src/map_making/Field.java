@@ -14,6 +14,7 @@ public abstract class Field {
 	public Color getColor() {
 		return this.color;
 	}
+
 	public int getTileSize() {
 		return this.TileSize;
 	}
