@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
+import java.awt.RenderingHints;
 
 import map_making.Field;
 
@@ -25,6 +26,7 @@ public class IsoTile extends Tile {
 	public void paint(Graphics g) {
 		int size = field.getTileSize();
 		Graphics2D g2 = (Graphics2D) g;
+		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		// draw tiles in rows
 		if(y==0){
         	xCrd[0] = space-size + size*x;

@@ -35,7 +35,7 @@ public class DisplayGrid{
  					frame.add(new TwoDTile(space, map.get(i).get(j), i, j, grid));
  					frame.pack();
  				}
- 				else{					
+ 				else{
  					frame.add(new IsoTile(space, map.get(i).get(j), i, j, grid));
  					frame.pack();
  				}
