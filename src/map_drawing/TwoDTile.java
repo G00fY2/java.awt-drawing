@@ -11,6 +11,8 @@ import map_making.Field;
 
 public class TwoDTile extends Tile {
 	private static final long serialVersionUID = 1L;
+	int xCrd[] = new int[4];
+	int yCrd[] = new int[4];
 	
 	TwoDTile(int space, Field field, int x, int y, Boolean grid) {
 		super(space, field, x, y, grid);
@@ -23,8 +25,15 @@ public class TwoDTile extends Tile {
 	public void paint(Graphics g) {
 		int size = field.getTileSize();
 		Graphics2D g2 = (Graphics2D) g;
-        int xCrd[] = { x*size,	size+x*size,	size+x*size,	x*size 		};
-        int yCrd[] = { y*size,	y*size,			size+y*size, 	size+y*size };
+        xCrd[0] = 0 + x*size;
+        xCrd[1] = size + x*size;
+        xCrd[2] = size + x*size;
+        xCrd[3] = 0 + x*size;
+        
+        yCrd[0] = 0 + y*size;
+        yCrd[1] = 0 + y*size;
+        yCrd[2] = size + y*size;
+        yCrd[3] = size + y*size;
 
 		Polygon p = new Polygon(xCrd, yCrd, xCrd.length);
 		//draw tile

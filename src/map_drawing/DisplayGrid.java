@@ -1,11 +1,10 @@
 package map_drawing;
 
-import map_making.Field;
 import java.util.ArrayList;
 import javax.swing.JFrame;
+import map_making.Field;
 
-public class DisplayGrid{
-	
+public class DisplayGrid {
 	public static void displayGrid(View view, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid) {
 		JFrame frame = new JFrame();
 
