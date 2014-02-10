@@ -8,10 +8,11 @@ public class MainClass {
 	
 	public static void main(String[] args) {
 		
-		int maxFields = 12; // number of tiles (x & y)
-		int tileSize = 24; // pixel
+		int maxFields = 16; // number of tiles (x & y)
+		int tileSize = 16; // pixel
 		boolean grid = true; // show grid overlay
 		boolean debug = true; // console output
+		long startTime = System.currentTimeMillis();
 
         View view = new IsoView();
 
@@ -20,7 +21,9 @@ public class MainClass {
 		ArrayList<ArrayList<Field>> map = MapGeneration.generateMap(maxFields, tileSize);
 		DisplayGrid.displayGrid(view, maxFields, map, grid);
 		
-		if(debug) {
+		long stopTime = System.currentTimeMillis();
+		
+		if(debug) {	      
 			System.out.println("DEBUG");
 
 			for(ArrayList<Field> row : map) {
@@ -36,6 +39,7 @@ public class MainClass {
 					}
 				}
 			}
+		    System.out.println("RUNTIME: "+(stopTime-startTime)+" ms");
 		}			
 	}
 	
