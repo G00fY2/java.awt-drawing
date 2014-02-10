@@ -5,7 +5,7 @@ import map_making.Field;
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class IsometricView implements View {
+public class IsoView implements View {
     public void drawGrid(JFrame frame, int maxFields, ArrayList<ArrayList<Field>> map, boolean grid) {
         int space = maxFields * map.get(0).get(0).getTileSize(); //calc space for frame dimension
 

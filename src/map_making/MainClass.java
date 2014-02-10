@@ -2,8 +2,7 @@ package map_making;
 
 import java.util.ArrayList;
 import map_drawing.DisplayGrid;
-import map_drawing.TwoDView;
-import map_drawing.View;
+import map_drawing.*;
 
 public class MainClass {
 	
@@ -14,7 +13,7 @@ public class MainClass {
 		boolean grid = true; // show grid overlay
 		boolean debug = true; // console output
 
-        View view = new TwoDView();
+        View view = new IsoView();
 
 		while(tileSize%2!=0){tileSize--;} // get even number, cause Polygon objects only have int precision 
 
