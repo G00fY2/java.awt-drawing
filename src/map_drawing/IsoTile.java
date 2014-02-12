@@ -8,7 +8,6 @@ import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.awt.RenderingHints;
 import java.util.ArrayList;
-
 import map_making.Field;
 
 public class IsoTile extends Tile {
@@ -66,9 +65,9 @@ public class IsoTile extends Tile {
             	// draw grid
             	if(grid){
             		g2.setStroke(new BasicStroke((int)size/50));
-            		g2.setColor(Color.black);
-            		g2.drawPolygon(p);
+            		g2.setColor(Color.black);	
             	}
+            	g2.drawPolygon(p);
             }
 		}	
 	}

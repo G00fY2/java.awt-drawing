@@ -1,9 +1,7 @@
 package map_drawing;
 
 import map_making.Field;
-
 import javax.swing.*;
-
 import java.util.ArrayList;
 
 public class TwoDView implements View {

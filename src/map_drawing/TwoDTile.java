@@ -52,8 +52,8 @@ public class TwoDTile extends Tile {
             	if(grid){
             		g2.setStroke(new BasicStroke((int)size/50));
             		g2.setColor(Color.black);
-            		g2.drawPolygon(p);
             	}
+            	g2.drawPolygon(p);
             }
 		}		
 	}
