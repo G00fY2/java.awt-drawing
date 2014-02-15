@@ -16,11 +16,12 @@ public class TwoDTile extends Tile {
 	int xCrd[] = new int[4];
 	int yCrd[] = new int[4];
 	
-	TwoDTile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid) {
-		super(space, maxFields, map, grid);
+	TwoDTile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid, Boolean minimap) {
+		super(space, maxFields, map, grid, minimap);
 	}
 
 	public Dimension getPreferredSize() {
+		space = minimap ? (int) space/4 : space;
         return new Dimension(space,space);
     }
 
@@ -33,6 +34,7 @@ public class TwoDTile extends Tile {
             	
             	this.field = map.get(x).get(y);
             	int size = field.getTileSize();	
+            	size = minimap ? (int) size/4 : size;
             	
             	xCrd[0] = 0 + x*size;
             	xCrd[1] = size + x*size;

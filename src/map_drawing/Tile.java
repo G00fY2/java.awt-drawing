@@ -15,13 +15,15 @@ public abstract class Tile extends JComponent {
 	protected int maxFields;
 	protected ArrayList<ArrayList<Field>> map;
 	protected Boolean grid;
+	protected Boolean minimap;
 	protected Field field;
 
-	Tile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid){
+	Tile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid, Boolean minimap){
         this.space = space;
         this.map = map;
 		this.grid = grid;
 		this.maxFields = maxFields;
+		this.minimap = minimap;
 	}
 	
 	abstract public Dimension getPreferredSize();	

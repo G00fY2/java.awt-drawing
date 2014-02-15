@@ -9,7 +9,7 @@ public class MainClass {
 	public static void main(String[] args) {
 		
 		int maxFields = 16; // number of tiles (x & y)
-		int tileSize = 16; // pixel
+		int tileSize = 32; // pixel
 		boolean grid = true; // show grid overlay
 		boolean debug = true; // console output
 		long startTime = System.currentTimeMillis();

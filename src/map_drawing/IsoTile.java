@@ -15,11 +15,12 @@ public class IsoTile extends Tile {
 	int xCrd[] = new int[4];
 	int yCrd[] = new int[4];
 	
-	IsoTile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid) {
-		super(space, maxFields, map, grid);
+	IsoTile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid, Boolean minimap) {
+		super(space, maxFields, map, grid, minimap);
 	}
 	
 	public Dimension getPreferredSize() {
+		space = minimap ? (int) space/4 : space;
         return new Dimension(space*2,space*2); //bigger frame for isometric view
     }
 	
@@ -32,6 +33,7 @@ public class IsoTile extends Tile {
             	
             	this.field = map.get(x).get(y);        	
         		int size = field.getTileSize();	
+        		size = minimap ? (int) size/4 : size;
 
             	// draw tiles in rows
             	if(y==0){
