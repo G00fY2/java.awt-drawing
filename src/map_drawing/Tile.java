@@ -1,11 +1,8 @@
 package map_drawing;
 
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.util.ArrayList;
-
 import javax.swing.JComponent;
-
 import map_making.Field;
 
 public abstract class Tile extends JComponent {
@@ -26,6 +23,5 @@ public abstract class Tile extends JComponent {
 		this.minimap = minimap;
 	}
 	
-	abstract public Dimension getPreferredSize();	
 	abstract public void paint(Graphics g);
 }

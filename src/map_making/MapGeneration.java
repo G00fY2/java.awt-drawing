@@ -3,7 +3,6 @@ package map_making;
 import java.util.ArrayList;
 import java.util.Random;
 
-
 public class MapGeneration {
  	
  	public static ArrayList<ArrayList<Field>> generateMap(int maxFields, int tileSize) {

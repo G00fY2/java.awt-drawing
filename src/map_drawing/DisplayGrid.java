@@ -1,9 +1,7 @@
 package map_drawing;
 
 import map_making.Field;
-
 import java.util.ArrayList;
-
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -20,7 +18,8 @@ public class DisplayGrid{
         
         // draw minimap always as 2D
         view = new TwoDView();
-        view.drawGrid(container, frame, maxFields, map, grid, !minimap);
+        minimap = true;
+        view.drawGrid(container, frame, maxFields, map, grid, minimap);
         
         frame.add(container);
         frame.pack();

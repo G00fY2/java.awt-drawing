@@ -11,7 +11,7 @@ public class MainClass {
 		int maxFields = 16; // number of tiles (x & y)
 		int tileSize = 32; // pixel
 		boolean grid = true; // show grid overlay
-		boolean debug = true; // console output
+		boolean debug = false; // console output
 		long startTime = System.currentTimeMillis();
 
         View view = new IsoView();

@@ -2,7 +2,6 @@ package map_drawing;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
@@ -19,11 +18,6 @@ public class TwoDTile extends Tile {
 	TwoDTile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid, Boolean minimap) {
 		super(space, maxFields, map, grid, minimap);
 	}
-
-	public Dimension getPreferredSize() {
-		space = minimap ? (int) space/4 : space;
-        return new Dimension(space,space);
-    }
 
 	public void paint(Graphics g) {
 		Graphics2D g2 = (Graphics2D) g;

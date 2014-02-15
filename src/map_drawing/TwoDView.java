@@ -2,6 +2,7 @@ package map_drawing;
 
 import map_making.Field;
 import javax.swing.*;
+import java.awt.Dimension;
 import java.util.ArrayList;
 
 public class TwoDView implements View {
@@ -10,7 +11,8 @@ public class TwoDView implements View {
         JPanel twodmap = new JPanel();
 		int space = maxFields * map.get(0).get(0).getTileSize(); //calc space for frame dimension
 		
-        twodmap.add(new TwoDTile(space, maxFields, map, grid, minimap));
+		twodmap.setPreferredSize(new Dimension(minimap ? space/4 : space,minimap ? space/4 : space));
+        twodmap.add(new TwoDTile(space, maxFields, map, grid, minimap)).setPreferredSize(new Dimension(minimap ? (int) space/4 : space,minimap ? (int) space/4 : space));
         container.add(twodmap);
     }
 
