@@ -15,8 +15,8 @@ public class TwoDTile extends Tile {
 	int xCrd[] = new int[4];
 	int yCrd[] = new int[4];
 	
-	TwoDTile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid, Boolean minimap) {
-		super(space, maxFields, map, grid, minimap);
+	TwoDTile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid, int miniscale) {
+		super(space, maxFields, map, grid, miniscale);
 	}
 
 	public void paint(Graphics g) {
@@ -28,7 +28,7 @@ public class TwoDTile extends Tile {
             	
             	this.field = map.get(x).get(y);
             	int size = field.getTileSize();	
-            	size = minimap ? (int) size/4 : size;
+            	size = miniscale > 0 ? (int) size/miniscale : size;
             	
             	xCrd[0] = 0 + x*size;
             	xCrd[1] = size + x*size;

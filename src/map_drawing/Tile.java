@@ -10,17 +10,17 @@ public abstract class Tile extends JComponent {
 	
 	protected int space;
 	protected int maxFields;
+	protected int miniscale;
 	protected ArrayList<ArrayList<Field>> map;
 	protected Boolean grid;
-	protected Boolean minimap;
 	protected Field field;
 
-	Tile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid, Boolean minimap){
+	Tile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid, int miniscale){
         this.space = space;
         this.map = map;
 		this.grid = grid;
 		this.maxFields = maxFields;
-		this.minimap = minimap;
+		this.miniscale = miniscale;
 	}
 	
 	abstract public void paint(Graphics g);

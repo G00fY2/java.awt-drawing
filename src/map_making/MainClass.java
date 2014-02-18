@@ -9,7 +9,8 @@ public class MainClass {
 	public static void main(String[] args) {
 		
 		int maxFields = 16; // number of tiles (x & y)
-		int tileSize = 32; // pixel
+		int tileSize = 24; // size per tile
+		int miniscale = 4; // scaling of minimap (0 = no minimap)
 		boolean grid = true; // show grid overlay
 		boolean debug = false; // console output
 		long startTime = System.currentTimeMillis();
@@ -19,7 +20,7 @@ public class MainClass {
 		while(tileSize%2!=0){tileSize--;} // get even number, cause Polygon objects only have int precision 
 
 		ArrayList<ArrayList<Field>> map = MapGeneration.generateMap(maxFields, tileSize);
-		DisplayGrid.displayGrid(view, maxFields, map, grid);
+		DisplayGrid.displayGrid(view, maxFields, map, grid, miniscale);
 		
 		long stopTime = System.currentTimeMillis();
 		

@@ -8,18 +8,18 @@ import javax.swing.JPanel;
 
 public class DisplayGrid{
 	
-	public static void displayGrid(View view, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid) {
+	public static void displayGrid(View view, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid, int miniscale) {
 		JFrame frame = new JFrame();
 		JPanel container = new JPanel();
-		Boolean minimap = false;
 		container.setLayout(new BoxLayout(container,BoxLayout.X_AXIS));
 
-        view.drawGrid(container, frame, maxFields, map, grid, minimap);
+        view.drawGrid(container, frame, maxFields, map, grid, 0);
         
         // draw minimap always as 2D
-        view = new TwoDView();
-        minimap = true;
-        view.drawGrid(container, frame, maxFields, map, grid, minimap);
+        if(miniscale > 0){
+        	View miniview = new TwoDView();
+        	miniview.drawGrid(container, frame, maxFields, map, grid, miniscale);
+        }
         
         frame.add(container);
         frame.pack();
