@@ -1,9 +1,7 @@
 package map_drawing;
 
 import map_making.Field;
-
 import javax.swing.*;
-
 import java.awt.Dimension;
 import java.util.ArrayList;
 
