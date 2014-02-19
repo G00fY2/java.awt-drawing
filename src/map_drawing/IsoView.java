@@ -1,12 +1,8 @@
 package map_drawing;
 
 import map_making.Field;
-
-import javax.swing.*;
-
 import java.awt.BasicStroke;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
@@ -71,15 +67,6 @@ public class IsoView extends Tiles {
             	g2.drawPolygon(p);
             }
 		}	
-	}
-
-	public void drawGrid(JPanel container, JFrame frame, int maxFields, ArrayList<ArrayList<Field>> map, boolean grid, int miniscale) {
-		JPanel isomap = new JPanel();
-		int space = maxFields * map.get(0).get(0).getTileSize(); //calc space for frame dimension
-		
-		isomap.setPreferredSize(new Dimension(miniscale > 0 ? (int) (space*2)/miniscale : (space*2),miniscale > 0 ? (int) (space*2)/miniscale : space*2));
-        isomap.add(new IsoView(space, maxFields, map, grid, miniscale)).setPreferredSize(new Dimension(miniscale > 0 ? (int) (space*2)/miniscale : (space*2),miniscale > 0 ? (int) (space*2)/miniscale : space*2));
-        container.add(isomap);   
 	}
 
 }
