@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JComponent;
 import map_making.Field;
 
-public abstract class Tile extends JComponent {
+public abstract class Tiles extends JComponent {
 	private static final long serialVersionUID = 1L;
 	
 	protected int space;
@@ -15,7 +15,7 @@ public abstract class Tile extends JComponent {
 	protected Boolean grid;
 	protected Field field;
 
-	Tile(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid, int miniscale){
+	Tiles(int space, int maxFields, ArrayList<ArrayList<Field>> map, Boolean grid, int miniscale){
         this.space = space;
         this.map = map;
 		this.grid = grid;

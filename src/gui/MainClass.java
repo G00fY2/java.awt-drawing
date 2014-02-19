@@ -1,8 +1,8 @@
-package map_making;
+package gui;
 
 import java.util.ArrayList;
-import map_drawing.DisplayGrid;
-import map_drawing.*;
+import map_making.Field;
+import map_making.MapGeneration;
 
 public class MainClass {
 	
@@ -15,12 +15,10 @@ public class MainClass {
 		boolean debug = false; // console output
 		long startTime = System.currentTimeMillis();
 
-        View view = new IsoView();
-
 		while(tileSize%2!=0){tileSize--;} // get even number, cause Polygon objects only have int precision 
 
 		ArrayList<ArrayList<Field>> map = MapGeneration.generateMap(maxFields, tileSize);
-		DisplayGrid.displayGrid(view, maxFields, map, grid, miniscale);
+		DisplayWindow.displayWindow(maxFields*tileSize, maxFields, map, grid, miniscale);
 		
 		long stopTime = System.currentTimeMillis();
 		
