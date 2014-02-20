@@ -45,7 +45,7 @@ public class TwoDView extends Tiles {
             	g2.fillPolygon(p);
             	//draw grid
             	if(grid){
-            		g2.setStroke(new BasicStroke((int)size/50));
+            		g2.setStroke(new BasicStroke((int)size/32));
             		g2.setColor(Color.black);
             	}
             	g2.drawPolygon(p);
