@@ -20,8 +20,9 @@ public class MapGeneration {
  			for(int j = 0; j < maxFields; j++) {			
  	 			double probJ = Math.abs(center-(j<center ? (j==center-0.5 ? j+0.5 : j+1) : j)); //position to be land/water (min = 0 | max = center-1)		
  	 		
- 	 			double randomDouble = random.nextDouble()*(center-1);
- 	 			fieldList.add(randomDouble < probI+probJ ? new Ocean(tileSize) : new Land(tileSize));
+ 	 			double zeroToCenter = random.nextDouble()*(center-1);
+ 	 			double probability = (probI==probJ ? (probI+probJ)-0.75 : probI+probJ);
+ 	 			fieldList.add(zeroToCenter < probability ? new Ocean(tileSize) : new Land(tileSize));
  			}
  			
  			map.add(fieldList);
