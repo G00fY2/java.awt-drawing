@@ -1,4 +1,4 @@
 java.drawing
 ============
 
-Test project for practising Java
+Test project for practising Java.
